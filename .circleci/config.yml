@@ -15,7 +15,7 @@ jobs:
           command: python ./chatbot_test.py
           name: Chatbot Test
       - run:
-          command: python ./spit_test.py
+          command: python ./split_test.py
           name: Python's Split Library test
 
 workflows:
