@@ -52,7 +52,6 @@ class ChatbotTestCase(unittest.TestCase):
                     KEY_MESSAGE: ""
                 }
             }
-            # TODO HW13
         ]
 
 
@@ -71,8 +70,9 @@ class ChatbotTestCase(unittest.TestCase):
             response = chatbot.parse_message(test[KEY_INPUT])
             expected = test[KEY_EXPECTED]
             
-            # TODO add assertNotEqual cases here instead
-            self.assertEqual(True, False)
+            self.assertNotEqual(response[KEY_IS_BOT], expected[KEY_IS_BOT])
+            self.assertNotEqual(response[KEY_BOT_COMMAND], expected[KEY_BOT_COMMAND])
+            self.assertNotEqual(response[KEY_MESSAGE], expected[KEY_MESSAGE])
 
 if __name__ == '__main__':
     unittest.main()
